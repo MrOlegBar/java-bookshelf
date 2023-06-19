@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3275e51-6156-43fd-bc2a-356c5d4c1233" name="Changes" comment="feat: Создал основные модели проекта. Вместе с БД" />
+    <list default="true" id="e3275e51-6156-43fd-bc2a-356c5d4c1233" name="Changes" comment="feat: Создал основные модели проекта. Вместе с БД">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,16 +35,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
     "last_opened_file_path": "/Users/leg/dev/bookshelf/server",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4827586",
-    "spring.configuration.checksum": "f43631999221dd1093f8ddc6d25107a2"
+    "spring.configuration.checksum": "bb9d6e2e09c4e2305b052de906e345d2"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -96,7 +103,9 @@
       <option name="presentableId" value="Default" />
       <updated>1686910576661</updated>
       <workItem from="1686910578927" duration="9247000" />
-      <workItem from="1686921798606" duration="1356000" />
+      <workItem from="1686921798606" duration="1929000" />
+      <workItem from="1686923791161" duration="91000" />
+      <workItem from="1687160278608" duration="292000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Создал основные модели проекта. Вместе с БД">
       <created>1686922771776</created>
@@ -105,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686922771776</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Создал основные модели проекта. Вместе с БД">
+      <created>1686923259723</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686923259723</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
