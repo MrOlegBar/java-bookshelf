@@ -22,7 +22,7 @@ import javax.validation.Valid;
 @RequiredArgsConstructor
 @Slf4j
 public class RegistrationController {
-    private final IUserService IUserService;
+    private final IUserService iUserService;
 
     @GetMapping("/user/registration")
     public String showRegistrationForm(WebRequest request, Model model) {
@@ -38,7 +38,7 @@ public class RegistrationController {
         ModelAndView mav = new ModelAndView();
 
         try {
-            User registered = IUserService.registerNewUserAccount(userDto);
+            User registered = iUserService.registerNewUserAccount(userDto);
         } catch (UserAlreadyExistException uaeEx) {
             mav.addObject("message", "An account for that username/email already exists.");
             return mav;

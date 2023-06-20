@@ -3,8 +3,7 @@ package ru.codeinside.dto;
 import org.mapstruct.Mapper;
 import ru.codeinside.model.User;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface IUserMapper {
-    User toUser(UserDto userDto);
-    UserDto toUserDto(User user);
+    public User toUser(UserDto userDto);
 }

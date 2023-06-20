@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.codeinside.dto.IUserMapper;
 import ru.codeinside.dto.UserDto;
-import ru.codeinside.dto.UserMapper;
 import ru.codeinside.error.UserAlreadyExistException;
 import ru.codeinside.model.User;
 import ru.codeinside.repository.UserRepository;
@@ -18,7 +17,6 @@ import javax.transaction.Transactional;
 @Transactional
 public class UserService implements IUserService {
     private final UserRepository userRepository;
-    private final UserMapper userMapper;
     private final IUserMapper iUserMapper;
 
     @Override
