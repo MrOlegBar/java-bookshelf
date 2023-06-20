@@ -3,7 +3,9 @@ package ru.codeinside.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import ru.codeinside.dto.IUserMapper;
 import ru.codeinside.dto.UserDto;
+import ru.codeinside.dto.UserMapper;
 import ru.codeinside.error.UserAlreadyExistException;
 import ru.codeinside.model.User;
 import ru.codeinside.repository.UserRepository;
@@ -15,7 +17,9 @@ import javax.transaction.Transactional;
 @Slf4j
 @Transactional
 public class UserService implements IUserService {
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+    private final UserMapper userMapper;
+    private final IUserMapper iUserMapper;
 
     @Override
     public User registerNewUserAccount(UserDto userDto) throws UserAlreadyExistException {
@@ -24,7 +28,8 @@ public class UserService implements IUserService {
                     userDto.getEmail()));
         }
 
-        userRepository.save();
+        User user = iUserMapper.toUser(userDto);
+        return userRepository.save(user);
     }
 
     private boolean emailExists(String email) {

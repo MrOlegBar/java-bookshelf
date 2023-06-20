@@ -44,7 +44,6 @@ public class RegistrationController {
             return mav;
         }
 
-        // rest of the implementation
-        return mav;
+        return new ModelAndView("successRegister", "user", userDto);
     }
 }
