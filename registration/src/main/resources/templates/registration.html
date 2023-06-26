@@ -1,9 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+
 <body>
-
 <h1 th:text="#{label.form.title}">form</h1>
-
-<form action="#" th:action="@{/user/registration}" th:object="${user}" method="POST" enctype="utf8">
+<form action="/user/registration" method="POST" th:object="${user}">
     <div>
         <label th:text="#{label.user.firstName}">first</label>
         <input th:field="*{firstName}"/>
