@@ -7,17 +7,20 @@ import ru.codeinside.validator.annotation.ValidEmail;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
+@PasswordMatches
 @Getter
 @Setter
-@PasswordMatches
 public class UserDto {
     @NotNull
     @NotEmpty
+    @Size(min = 2, max = 20)
     private String firstName;
 
     @NotNull
     @NotEmpty
+    @Size(min = 2, max = 20)
     private String lastName;
 
     @NotNull
