@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{login.header.title}">Header Form</title>
+</head>
+<body>
+<h1 th:text="#{login.title}">form</h1>
+<form action="#" th:action="@{/user/login}" method="POST" th:object="${userDto}">
+  <div>
+    <label th:text="#{login.user.email}">email</label>
+    <label>
+      <input type="email" th:field="*{email}"/>
+    </label>
+    <p th:each="error : ${#fields.errors('email')}"
+       th:text="${error}">Validation error</p>
+  </div>
+  <div>
+    <label th:text="#{login.user.password}">password</label>
+    <label>
+      <input type="password" th:field="*{password}"/>
+    </label>
+    <p th:each="error : ${#fields.errors('password')}"
+       th:text="${error}">Validation error</p>
+  </div>
+
+  <button type="submit" th:text="#{login.form.submit}">submit</button>
+</form>
+<a th:href="@{/user/registration}" th:text="#{login.form.registrationLink}">registration</a>
+</body>
+</html>

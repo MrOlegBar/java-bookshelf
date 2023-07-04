@@ -6,4 +6,6 @@ import ru.codeinside.model.User;
 
 public interface IUserService {
     User registerNewUserAccount(UserDto userDto) throws UserAlreadyExistException;
+
+    Boolean checkingUserAccount(UserDto userDto) throws UserAlreadyExistException;
 }

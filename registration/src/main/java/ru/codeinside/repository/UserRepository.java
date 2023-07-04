@@ -5,4 +5,6 @@ import ru.codeinside.model.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByEmailIgnoreCase(String email);
+
+    Boolean findByEmailIgnoreCaseAndPasswordEquals(String email, String password);
 }
