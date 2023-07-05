@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org" lang="">
+      xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <title th:text="#{registration.header.title}">Header Form</title>
@@ -45,6 +45,8 @@
             <li th:each="error : ${#fields.errors('email')}"
                 th:text="${error}"
                 th:class="error"/>
+            <li th:if="${message != null}"
+                th:text="#{registration.message}" class="error"/>
         </ul>
     </div>
     <div>
@@ -53,6 +55,9 @@
             <input type="password" th:field="*{password}"/>
         </label>
         <ul>
+            <li th:each="error : ${#fields.errors('password')}"
+                th:text="${error}"
+                th:class="error"/>
             <li th:each="error : ${#fields.errors('password')}"
                 th:text="${error}"
                 th:class="error"/>

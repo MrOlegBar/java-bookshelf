@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Successfully login</title>
+    <title th:text="#{success.login.title}">title</title>
 </head>
 <body>
-<h1>Success !</h1>
-<p><span th:text="#{login.name.app}">Our App</span> 's page waiting ...</p>
+<h1 th:text="#{success.login.body}">header</h1>
+<p>
+    <span th:text="#{login.name.app}">Our App</span>
+    <span th:text="#{success.login.text}">text</span>
+</p>
 </body>
 </html>

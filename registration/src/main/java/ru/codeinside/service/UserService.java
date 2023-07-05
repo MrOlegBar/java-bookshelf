@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.codeinside.dto.IUserMapper;
+import ru.codeinside.dto.ShortUserDto;
 import ru.codeinside.dto.UserDto;
 import ru.codeinside.error.UserAlreadyExistException;
 import ru.codeinside.error.UserNotFoundException;
@@ -32,10 +33,10 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public Boolean checkingUserAccount(UserDto userDto) throws UserAlreadyExistException {
-        if (!emailAndPasswordExists(userDto.getEmail(), userDto.getPassword())) {
+    public Boolean checkingUserAccount(ShortUserDto shortUserDto) throws UserAlreadyExistException {
+        if (!emailAndPasswordExists(shortUserDto.getEmail(), shortUserDto.getPassword())) {
             throw new UserNotFoundException(String.format("There is not an account with that email address: %s.",
-                    userDto.getEmail()));
+                    shortUserDto.getEmail()));
         }
 
         return true;
@@ -46,6 +47,6 @@ public class UserService implements IUserService {
     }
 
     private boolean emailAndPasswordExists(String email, String password) {
-        return userRepository.findByEmailIgnoreCaseAndPasswordEquals(email, password);
+        return userRepository.findByEmailIgnoreCaseAndPasswordEquals(email, password) != null;
     }
 }

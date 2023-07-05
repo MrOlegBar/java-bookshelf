@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Successfully registration</title>
+    <title th:text="#{success.registration.title}">title</title>
 </head>
 <body>
-<h1>Congratulations !</h1>
-<p>Нou have successfully registered in <span th:text="#{registration.name.app}">Our App</span></p>
+<h1 th:text="#{success.registration.body}">header</h1>
+<p>
+    <span th:text="#{success.registration.text}">text</span>
+    <span th:text=" #{registration.name.app}"> Our App</span>
+</p>
+<a th:href="@{/user/login}" th:text="#{registration.form.loginLink}">login</a>
 </body>
 </html>

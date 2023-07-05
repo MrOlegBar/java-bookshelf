@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3275e51-6156-43fd-bc2a-356c5d4c1233" name="Changes" comment="feat:">
-      <change afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/error/ApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/error/ErrorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/error/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registration/src/main/resources/login.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registration/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registration/src/main/resources/templates/successLogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/dto/ShortUserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration/src/main/resources/login_ru.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registration/src/main/resources/registration_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/dto/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/validator/annotation/PasswordMatches.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/validator/annotation/PasswordMatches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/validator/annotation/ValidEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/validator/annotation/ValidEmail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/src/main/resources/login.properties" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/resources/login.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration/src/main/resources/registration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/resources/registration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/resources/templates/successRegister.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registration/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/src/main/resources/templates/successLogin.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/resources/templates/successLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/src/main/resources/templates/successRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration/src/main/resources/templates/successRegister.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -75,12 +80,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "/Users/leg/dev/bookshelf/registration/src/main/resources/templates",
+    "last_opened_file_path": "/Users/leg/dev/bookshelf/registration/src/main/resources",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.4827586",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "File.Encoding",
     "spring.configuration.checksum": "6a7b4cd7bce545ac6ca3c54cf3df387d"
   },
   "keyToStringList": {
@@ -97,9 +102,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/registration/src/main/resources" />
       <recent name="$PROJECT_DIR$/registration/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/registration/src/main/java/ru/codeinside/error" />
-      <recent name="$PROJECT_DIR$/registration/src/main/resources" />
       <recent name="$PROJECT_DIR$/client/src/main/resources" />
       <recent name="$PROJECT_DIR$/server" />
     </key>
@@ -178,7 +183,8 @@
       <workItem from="1688038302918" duration="1505000" />
       <workItem from="1688057999816" duration="39000" />
       <workItem from="1688101357225" duration="49000" />
-      <workItem from="1688452585070" duration="12341000" />
+      <workItem from="1688452585070" duration="12673000" />
+      <workItem from="1688541774867" duration="15880000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Создал основные модели проекта. Вместе с БД">
       <created>1686922771776</created>
@@ -250,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688101396203</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat:">
+      <created>1688480822733</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688480822733</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,23 +292,83 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
-          <line>44</line>
+          <line>38</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
-          <line>64</line>
+          <line>65</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/UserService.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="20" />
+          <line>36</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/UserService.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="21" />
+          <line>26</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/UserService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/controller/RegistrationController.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/UserService.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/service/UserService.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/registration/src/main/java/ru/codeinside/validator/PasswordMatchesValidator.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
