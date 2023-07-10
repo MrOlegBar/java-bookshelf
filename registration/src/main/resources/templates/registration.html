@@ -58,9 +58,6 @@
             <li th:each="error : ${#fields.errors('password')}"
                 th:text="${error}"
                 th:class="error"/>
-            <li th:each="error : ${#fields.errors('password')}"
-                th:text="${error}"
-                th:class="error"/>
         </ul>
     </div>
     <div>
@@ -68,6 +65,13 @@
         <label>
             <input type="password" th:field="*{matchingPassword}"/>
         </label>
+        <ul>
+            <li th:each="error : ${#fields.errors('matchingPassword')}"
+                th:text="${error}"
+                th:class="error"/>
+            <li th:if="${messageGlobalError != null}"
+                th:text="${messageGlobalError}" class="error"/>
+        </ul>
     </div>
 
     <button type="submit" th:text="#{registration.form.submit}">submit</button>

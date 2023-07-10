@@ -34,8 +34,11 @@ public class UserService implements IUserService {
 
     @Override
     public Boolean checkingUserAccount(ShortUserDto shortUserDto) throws UserAlreadyExistException {
-        if (!emailAndPasswordExists(shortUserDto.getEmail(), shortUserDto.getPassword())) {
+        if (!emailExists(shortUserDto.getEmail())) {
             throw new UserNotFoundException(String.format("There is not an account with that email address: %s.",
+                    shortUserDto.getEmail()));
+        } else if (!emailAndPasswordExists(shortUserDto.getEmail(), shortUserDto.getPassword())) {
+            throw new UserNotFoundException(String.format("Incorrect password with that email address: %s.",
                     shortUserDto.getEmail()));
         }
 

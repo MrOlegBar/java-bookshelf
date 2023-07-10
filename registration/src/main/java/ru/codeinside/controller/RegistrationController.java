@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,14 +13,13 @@ import ru.codeinside.dto.ShortUserDto;
 import ru.codeinside.dto.UserDto;
 import ru.codeinside.error.UserAlreadyExistException;
 import ru.codeinside.error.UserNotFoundException;
-import ru.codeinside.model.User;
 import ru.codeinside.service.IUserService;
 
 import javax.validation.Valid;
 
 @Controller
 @Slf4j
-public class RegistrationController {
+public class    RegistrationController {
     private final IUserService iUserService;
 
     public RegistrationController(IUserService iUserService) {
@@ -37,12 +37,16 @@ public class RegistrationController {
     public ModelAndView registerUserAccount(@Valid @ModelAttribute UserDto userDto,
                                             BindingResult result, ModelAndView mav) {
         if (result.hasErrors()) {
+            ObjectError objectError = result.getGlobalError();
+            if (objectError != null) {
+                mav.addObject("messageGlobalError", result.getGlobalError().getDefaultMessage());
+            }
             mav.setViewName("registration");
             return mav;
         }
 
         try {
-            User registeredUser = iUserService.registerNewUserAccount(userDto);
+            iUserService.registerNewUserAccount(userDto);
         } catch (UserAlreadyExistException uaeEx) {
             mav.addObject("message", uaeEx.getMessage());
             mav.setViewName("registration");
@@ -69,7 +73,7 @@ public class RegistrationController {
         }
 
         try {
-            Boolean loginedUser = iUserService.checkingUserAccount(shortUserDto);
+            iUserService.checkingUserAccount(shortUserDto);
         } catch (UserNotFoundException unfEx) {
             mav.addObject("message", unfEx.getMessage());
             mav.setViewName("login");

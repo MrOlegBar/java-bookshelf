@@ -22,8 +22,8 @@
             <li th:each="error : ${#fields.errors('email')}"
                 th:text="${error}"
                 th:class="error"/>
-            <li th:if="${message != null}"
-                th:text="#{login.message}" class="error"/>
+            <li th:if="${message != null} and ${message.contains('not an account')}"
+                th:text="#{login.message.notAnAccount}" class="error"/>
         </ul>
     </div>
     <div>
@@ -35,6 +35,8 @@
             <li th:each="error : ${#fields.errors('password')}"
                 th:text="${error}"
                 th:class="error"/>
+            <li th:if="${message != null} and ${message.contains('Incorrect password')}"
+                th:text="#{login.message.incorrectPassword}" class="error"/>
         </ul>
     </div>
 

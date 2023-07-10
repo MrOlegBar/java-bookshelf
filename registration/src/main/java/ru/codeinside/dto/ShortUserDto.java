@@ -4,17 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 import ru.codeinside.validator.annotation.ValidEmail;
 
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Getter
 @Setter
 public class ShortUserDto {
-    @NotNull
-    @NotEmpty
+    @Size(min = 8, max = 256)
     private String password;
     @ValidEmail
-    @NotNull
-    @NotEmpty
     private String email;
 }
