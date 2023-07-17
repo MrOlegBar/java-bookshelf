@@ -9,6 +9,8 @@
             color: tomato;
         }
     </style>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -73,6 +75,11 @@
                 th:text="${messageGlobalError}" class="error"/>
         </ul>
     </div>
+
+    <div class="g-recaptcha col-sm-5"
+         th:attr="data-sitekey=${@captchaSettings.getSite()}"></div>
+    <span id="captchaError" class="alert alert-danger col-sm-4"
+          style="display:none"></span>
 
     <button type="submit" th:text="#{registration.form.submit}">submit</button>
 </form>
