@@ -1,11 +1,10 @@
 package ru.codeinside.service;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.client.RestOperations;
 import ru.codeinside.config.CaptchaSettings;
 import ru.codeinside.config.GoogleResponse;
 import ru.codeinside.error.InvalidReCaptchaException;
@@ -17,23 +16,27 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
 public class CaptchaService implements ICaptchaService {
 
     private final CaptchaSettings captchaSettings;
-    private final RestTemplate restTemplate;
+    private final RestOperations restTemplate;
 
     private static final Pattern RESPONSE_PATTERN = Pattern.compile("[A-Za-z0-9_-]+");
 
+    public CaptchaService(CaptchaSettings captchaSettings, RestOperations restTemplate) {
+        this.captchaSettings = captchaSettings;
+        this.restTemplate = restTemplate;
+    }
+
     @Bean
-    public RestTemplate getRestTemplate() {
+    public RestOperations getRestTemplate() {
         return restTemplate;
     }
 
     @Override
     public void processResponse(String response, HttpServletRequest request) {
-        if(!responseSanityCheck(response)) {
+        if (!responseSanityCheck(response)) {
             throw new InvalidReCaptchaException("Response contains invalid characters");
         }
 
@@ -43,7 +46,7 @@ public class CaptchaService implements ICaptchaService {
 
         GoogleResponse googleResponse = restTemplate.getForObject(verifyUri, GoogleResponse.class);
 
-        if(!Objects.requireNonNull(googleResponse).isSuccess()) {
+        if (!Objects.requireNonNull(googleResponse).isSuccess()) {
             throw new ReCaptchaInvalidException("reCaptcha was not successfully validated");
         }
     }

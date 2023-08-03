@@ -1,6 +1,5 @@
 package ru.codeinside.service;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.codeinside.dto.IUserMapper;
@@ -14,12 +13,16 @@ import ru.codeinside.repository.UserRepository;
 import javax.transaction.Transactional;
 
 @Service
-@RequiredArgsConstructor
 @Slf4j
 @Transactional
 public class UserService implements IUserService {
     private final UserRepository userRepository;
     private final IUserMapper iUserMapper;
+
+    public UserService(UserRepository userRepository, IUserMapper iUserMapper) {
+        this.userRepository = userRepository;
+        this.iUserMapper = iUserMapper;
+    }
 
     @Override
     public User registerNewUserAccount(UserDto userDto) throws UserAlreadyExistException {
